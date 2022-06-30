@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Button, Stack } from "@mui/material";
-import GameContext from "./GameContext";
+import GameContext from "../GameContext";
 
 export const ButtonGroup: React.FC = () => {
   const {

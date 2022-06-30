@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Box, Container } from "@mui/material";
 
-import GameContext from "./GameContext";
-import unTypedSettings from "../../content/settings.json";
+import GameContext from "../GameContext";
+import unTypedSettings from "../content/settings.json";
 import { getRandomInteger } from "./helper";
 import { Cell } from "./Cell";
 

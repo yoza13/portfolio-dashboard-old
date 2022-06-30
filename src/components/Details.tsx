@@ -11,8 +11,8 @@ import TimerIcon from "@mui/icons-material/Timer";
 import DoneIcon from "@mui/icons-material/Done";
 import FlagIcon from "@mui/icons-material/Flag";
 import SignalCellular0BarIcon from "@mui/icons-material/SignalCellular0Bar";
-import GameContext from "./GameContext";
-import unTypedSettings from "../../content/settings.json";
+import GameContext from "../GameContext";
+import unTypedSettings from "../content/settings.json";
 
 interface SettingsData {
   [key: string]: {

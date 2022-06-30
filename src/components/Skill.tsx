@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Box, Button, Typography } from "@mui/material";
-import GameContext from "./GameContext";
+import GameContext from "../GameContext";
 
 export const Skill: React.FC = () => {
   const settings = [

@@ -2,7 +2,7 @@ import * as React from "react";
 import { Box, Button } from "@mui/material";
 import AdbIcon from "@mui/icons-material/Adb";
 import TourIcon from "@mui/icons-material/Tour";
-import GameContext from "./GameContext";
+import GameContext from "../GameContext";
 
 interface CellProps {
   value: string | number;
