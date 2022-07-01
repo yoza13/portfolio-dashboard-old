@@ -2,7 +2,6 @@ import {
   AppBar,
   Avatar,
   Box,
-  Collapse,
   Fab,
   IconButton,
   List,
@@ -22,6 +21,7 @@ import { useNavigate, Link as RouterLink } from "react-router-dom";
 import { useStyles } from "../useStyles";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { ScrollTop } from "./ScrollTop";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 const Yash = require("../images/Yash.jpg").default;
 
@@ -44,24 +44,7 @@ export const NavigationBar: React.FC = () => {
     },
     {
       title: "Projects",
-      list: [
-        {
-          title: "Weather App",
-          page: "/projects/weather-app",
-        },
-        {
-          title: "Calculator",
-          page: "/projects/calculator",
-        },
-        {
-          title: "To Do",
-          page: "/projects/todo",
-        },
-        {
-          title: "Mine-Sweeper (Single Player Game)",
-          page: "/projects/mine-sweeper",
-        },
-      ],
+      href: "https://www.projects.yashvoza.com/",
     },
     {
       title: "Contact Me",
@@ -75,7 +58,7 @@ export const NavigationBar: React.FC = () => {
         <List>
           {leftNavItems.map((item, index) => (
             <>
-              {!item.list ? (
+              {!item.href ? (
                 <ListItem
                   component={RouterLink}
                   to={item.page}
@@ -93,32 +76,19 @@ export const NavigationBar: React.FC = () => {
                 </ListItem>
               ) : (
                 <>
-                  <ListItemButton key={item.title + index} component="button">
+                  <ListItemButton
+                    key={item.title + index}
+                    component="button"
+                    onClick={() =>
+                      window.open(
+                        "https://www.projects.yashvoza.com/",
+                        "_blank"
+                      )
+                    }
+                  >
                     <ListItemText primary={item.title} sx={{ pl: "16px" }} />
+                    <OpenInNewIcon />
                   </ListItemButton>
-                  <Collapse in={true} timeout="auto" unmountOnExit>
-                    <List component="ul" className={classes.listStyleDisc}>
-                      {item?.list.map((projects, index) => {
-                        return (
-                          <ListItem
-                            key={index + projects.page}
-                            component={RouterLink}
-                            to={projects.page}
-                            className={classes.drawerListItem}
-                          >
-                            <ListItemButton
-                              sx={{ pl: 4 }}
-                              onClick={() => {
-                                navigate(projects.page);
-                              }}
-                            >
-                              <ListItemText primary={projects.title} />
-                            </ListItemButton>
-                          </ListItem>
-                        );
-                      })}
-                    </List>
-                  </Collapse>
                 </>
               )}
             </>
