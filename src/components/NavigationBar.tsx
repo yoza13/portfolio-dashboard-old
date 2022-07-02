@@ -75,8 +75,18 @@ export const NavigationBar: React.FC = () => {
                   </ListItemButton>
                 </ListItem>
               ) : (
-                <>
-                  <ListItemButton
+                <ListItem
+                  secondaryAction={
+                    <IconButton aria-label="new-tag-icon">
+                      <OpenInNewIcon />
+                    </IconButton>
+                  }
+                  key={item.title + index}
+                  onClick={() =>
+                    window.open("https://www.projects.yashvoza.com/", "_blank")
+                  }
+                >
+                  {/* <ListItemButton
                     key={item.title + index}
                     component="button"
                     onClick={() =>
@@ -85,11 +95,10 @@ export const NavigationBar: React.FC = () => {
                         "_blank"
                       )
                     }
-                  >
-                    <ListItemText primary={item.title} sx={{ pl: "16px" }} />
-                    <OpenInNewIcon />
-                  </ListItemButton>
-                </>
+                  > */}
+                  <ListItemText primary={item.title} sx={{ pl: "16px" }} />
+                  {/* </ListItemButton> */}
+                </ListItem>
               )}
             </>
           ))}

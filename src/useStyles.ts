@@ -22,47 +22,6 @@ export const useStyles: any = makeStyles<Theme, Props>((theme) =>
           ? theme.palette.common.black
           : theme.palette.primary.dark,
     },
-    calculatorBox: {
-      width: "fit-content",
-      margin: "auto",
-    },
-    displayField: {
-      color: "#fff",
-      backgroundColor: (props) =>
-        props.isDarkTheme ? theme.palette.grey.A700 : theme.palette.grey[400],
-      fontWeight: "bold",
-      height: "3em",
-      textAlign: "right",
-      fontSize: "24px",
-    },
-    buttonPanel: {
-      marginBottom: "2rem",
-    },
-    buttonStack: {
-      borderTop: "1px solid",
-      "&:last-child": {
-        borderBottom: "1px solid",
-      },
-    },
-    buttons: {
-      fontSize: "24px",
-      color: (props) => (props.isDarkTheme ? "#fff" : "#000"),
-      borderRight: "1px solid",
-      borderRadius: 0,
-      width: "25%",
-      backgroundColor: (props) =>
-        props.isDarkTheme ? theme.palette.grey.A700 : theme.palette.grey[200],
-      "&:last-child": {
-        borderRight: "none",
-        backgroundColor: (props) =>
-          props.isDarkTheme
-            ? theme.palette.warning.dark
-            : theme.palette.warning.light,
-      },
-      "&.wide": {
-        width: "50%",
-      },
-    },
     contentBox: {
       margin: "3rem 0 3rem 0",
       paddingTop: "2rem",
@@ -92,6 +51,8 @@ export const useStyles: any = makeStyles<Theme, Props>((theme) =>
       [theme.breakpoints.up("md")]: {
         display: "none !important",
       },
+      width: "80%",
+      margin: "auto",
       "& .accordion": { padding: "0 1rem" },
     },
     experienceCardsStack: {
@@ -99,11 +60,6 @@ export const useStyles: any = makeStyles<Theme, Props>((theme) =>
       margin: "0 auto",
       marginBottom: "1rem",
       [theme.breakpoints.down("md")]: {
-        display: "none !important",
-      },
-    },
-    gameAlert: {
-      [theme.breakpoints.up("md")]: {
         display: "none !important",
       },
     },
@@ -121,10 +77,7 @@ export const useStyles: any = makeStyles<Theme, Props>((theme) =>
       textDecoration: "none",
       color: "#fff",
       fontWeight: "bold",
-      backgroundImage: (props) =>
-        props.isDarkTheme
-          ? `linear-gradient(${theme.palette.secondary.main}, ${theme.palette.secondary.light})`
-          : `linear-gradient(${theme.palette.primary.main}, ${theme.palette.primary.light})`,
+      backgroundImage: `linear-gradient(${theme.palette.primary.main}, ${theme.palette.primary.light})`,
     },
     footer: {
       borderTop: "1px solid",

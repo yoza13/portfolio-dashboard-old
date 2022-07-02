@@ -13,10 +13,6 @@ import { AboutMe } from "./components/AboutMe";
 import { ContactMe } from "./components/ContactMe";
 import { Experience } from "./components/Experience";
 import { ErrorFallback } from "./components/ErrorFallback";
-import { WeatherSearch } from "./components/WeatherApp/WeatherSearchUI";
-import { Calculator } from "./components/Calculator/Calculator";
-import { Minesweeper } from "./components/MineSweeper/Game";
-import { ToDoApp } from "./components/ToDo/ToDoApp";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
 
@@ -52,16 +48,6 @@ export const App = () => {
               <Route path="/about-me" element={<AboutMe />}></Route>
               <Route path="/contact-me" element={<ContactMe />}></Route>
               <Route path="/experience" element={<Experience />}></Route>
-              <Route
-                path="/projects/weather-app"
-                element={<WeatherSearch />}
-              ></Route>
-              {/* <Route path="/projects/calculator" element={<Calculator />}></Route> */}
-              <Route path="/projects/todo" element={<ToDoApp />}></Route>
-              <Route
-                path="/projects/mine-sweeper"
-                element={<Minesweeper />}
-              ></Route>
             </Routes>
             <Footer />
           </Router>
