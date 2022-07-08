@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
-import { Home } from "../components/Home";
+import { Experience } from "../components/Experience";
 
 const Root: NextPage = () => {
-  return <Home />;
+  return <Experience />;
 };
 
 export default Root;

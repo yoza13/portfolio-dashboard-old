@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
-import { Home } from "../components/Home";
+import { AboutMe } from "../components/AboutMe";
 
 const Root: NextPage = () => {
-  return <Home />;
+  return <AboutMe />;
 };
 
 export default Root;
